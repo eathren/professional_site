@@ -1,3 +1,10 @@
 body {
   background-color: #eeeeee;
 }
+
+.bio-avatar {
+  margin-right: var(--spacing-4);
+  margin-bottom: var(--spacing-0);
+  min-width: 50px;
+  border-radius: 100%;
+}

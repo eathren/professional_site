@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Nolan Braman`,
-    description: `Software Engineer in the Greater Boston Area.`,
+    description: `Software Engineer in Boston, mA.`,
     siteUrl: `https://www.nolanbraman.com`,
     author: {
       name: `Nolan Braman`,
-      summary: `building better software in Boston, MA.`,
+      summary: `Building better software in Boston, MA `,
     },
     social: {
       twitter: `eathren`,

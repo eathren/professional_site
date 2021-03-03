@@ -4,29 +4,19 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import Bio from "../components/Bio"
+import ProjectsBar from "../components/ProjectsBar"
 
-const BlogIndex = ({ data, location }) => {
+const indexPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Nolan Braman`
   const posts = data.allMarkdownRemark.nodes
-
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
-        {/* <Bio /> */}
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      {/* <Bio /> */}
+      <Bio />
+      <ProjectsBar></ProjectsBar>
+      {/* <Link to="/resume/"> About me</Link> */}
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -63,7 +53,7 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default indexPage
 
 export const pageQuery = graphql`
   query {
