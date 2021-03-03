@@ -2,8 +2,13 @@ module.exports = {
   siteMetadata: {
     title: `Nolan Braman`,
     description: `Software Engineer in the Greater Boston Area.`,
-    author: `@eathren`,
+    siteUrl: `https://www.nolanbraman.com`,
+    author: {
+      name: `Nolan Braman`,
+      summary: `building better software in Boston, MA.`,
+    },
     social: {
+      twitter: `eathren`,
       github: `https://github.com/eathren`,
       linkedin: `https://www.linkedin.com/in/nolanbraman/`,
     },
@@ -14,11 +19,33 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/src/content/blog`,
+        name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // CommonMark mode (default: true)
+        commonmark: true,
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // Pedantic mode (default: true)
+        pedantic: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [],
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-typography`,
@@ -26,6 +53,8 @@ module.exports = {
         pathToConfigModule: `src/utils/typography/typography.js`,
       },
     },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
