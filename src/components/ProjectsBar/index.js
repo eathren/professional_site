@@ -20,8 +20,8 @@ import MoreVertIcon from "@material-ui/icons/MoreVert"
 import LinkIcon from "@material-ui/icons/Link"
 import GitHubIcon from "@material-ui/icons/GitHub"
 
-import SolistsImage from "../../images/solists.png"
-import SortPath from "../../images/sortpath.png"
+import SolistsImage from "../Images/SolistsImage"
+import SortPath from "../Images/SortPath"
 
 const useStyles = makeStyles(theme => ({
   media: {
@@ -39,6 +39,10 @@ const useStyles = makeStyles(theme => ({
     transform: "rotate(180deg)",
   },
 }))
+
+function ImageBlock(image) {
+  return <div>{image}</div>
+}
 
 const ProjectsBar = () => {
   const classes = useStyles()
@@ -96,11 +100,13 @@ const ProjectsBar = () => {
                     className="project-img"
                     onClick={() => handleExpandClick(i)}
                   >
-                    <img
-                      className={classes.media}
-                      src={project.image_url}
-                      className="project-img"
-                    />
+                    {/* There has to be a better way to get the gatsby fuzzy 
+                    load here than a conditional render.  */}
+                    {project.image_url == SolistsImage ? (
+                      <SolistsImage />
+                    ) : (
+                      <SortPath />
+                    )}
                   </CardActionArea>
                   <CardActions disableSpacing>
                     <IconButton href={project.url} aria-label="site link">
