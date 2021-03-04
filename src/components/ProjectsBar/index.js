@@ -24,9 +24,6 @@ import SolistsImage from "../../images/solists.png"
 import SortPath from "../../images/sortpath.png"
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    maxWidth: 345,
-  },
   media: {
     height: 0,
     paddingTop: "56.25%", // 16:9
@@ -42,15 +39,6 @@ const useStyles = makeStyles(theme => ({
     transform: "rotate(180deg)",
   },
 }))
-
-const ProjectsImage = project => {
-  return (
-    <>
-      <img src={project.image} className="project-image"></img>
-      {console.log(project.image)}
-    </>
-  )
-}
 
 const ProjectsBar = () => {
   const classes = useStyles()
@@ -68,7 +56,6 @@ const ProjectsBar = () => {
   function handleExpandClick(i) {
     const tempArray = [...expanded]
     tempArray[i] = !tempArray[i]
-    console.log(tempArray)
     setExpanded(tempArray)
   }
 
@@ -105,11 +92,14 @@ const ProjectsBar = () => {
             <Grid item xs={12} sm={12} md={6} spacing={3} key={i}>
               <div className="project-container">
                 <Card className="projects-card">
-                  <CardActionArea onClick={() => handleExpandClick(i)}>
+                  <CardActionArea
+                    className="project-img"
+                    onClick={() => handleExpandClick(i)}
+                  >
                     <img
                       className={classes.media}
                       src={project.image_url}
-                      className=""
+                      className="project-img"
                     />
                   </CardActionArea>
                   <CardActions disableSpacing>
