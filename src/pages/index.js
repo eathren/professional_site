@@ -6,6 +6,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Bio from "../components/Bio"
 import ProjectsBar from "../components/ProjectsBar"
+import Grid from "@material-ui/core/grid"
 
 const indexPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Nolan Braman`
@@ -16,24 +17,28 @@ const indexPage = ({ data, location }) => {
       <SEO title="All posts" />
       <Bio />
       <ProjectsBar></ProjectsBar>
+      <h1> Blog</h1>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li key={post.fields.slug}>
+            <li key={post.fields.slug} style={{ marginBottom: "30px" }}>
               <article
                 className="post-list-item"
                 itemScope
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <h2>
+                  <h2 style={{ marginBottom: "5px" }}>
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
+                  <small>
+                    <span>{post.frontmatter.date} -</span>
+                    <span> {post.timeToRead} min read</span>
+                  </small>
                 </header>
                 <section>
                   <p
@@ -72,6 +77,7 @@ export const pageQuery = graphql`
           title
           description
         }
+        timeToRead
       }
     }
   }

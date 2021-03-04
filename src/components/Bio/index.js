@@ -33,7 +33,7 @@ const Bio = () => {
         alignItems="center"
         spacing={3}
       >
-        <Grid item xs={3}>
+        <Grid item>
           <StaticImage
             src="../../images/profile-pic.png"
             formats={["AUTO", "WEBP", "AVIF"]}
@@ -43,13 +43,13 @@ const Bio = () => {
             formats={["AUTO", "WEBP", "AVIF"]}
             style={{
               marginBottom: `1.45rem`,
-              maxHeight: "50px",
-              maxWidth: "50px",
-              borderRadius: "50%",
+              maxHeight: "60px",
+              maxWidth: "60px",
+              borderRadius: "100%",
             }}
           />
         </Grid>
-        <Grid item xs={9}>
+        <Grid item>
           {author?.name && (
             <p>
               Personal blog and portfolio by{" "}

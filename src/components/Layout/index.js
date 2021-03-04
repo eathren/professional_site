@@ -31,18 +31,17 @@ const Layout = ({ children }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        {/* <Header siteTitle={data.site.siteMetadata?.title || `Nolan Braman`} /> */}
+        <Header siteTitle={data.site.siteMetadata?.title || `Nolan Braman`} />
         <Container maxWidth="md">
           <main>{children}</main>
         </Container>
         {/* <footer
           style={{
             marginTop: `2rem`,
+            textAlign: "center",
           }}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          © 2018 - {new Date().getFullYear()}, Nolan Braman
         </footer> */}
       </ThemeProvider>
     </>
