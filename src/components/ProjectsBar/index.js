@@ -70,7 +70,7 @@ const ProjectsBar = () => {
       keywords: ["Django", "Python", "Heroku", "Sendgrid"],
       description:
         "An online job board aggregator and promotional system for companies and clients.",
-      image_url: SolistsImage,
+      image_url: <SolistsImage />,
       image_rel: "../../images/solists.png",
       github: "",
     },
@@ -80,7 +80,7 @@ const ProjectsBar = () => {
       keywords: ["React.js", "JavaScript", "Sass / CSS3", "Netlify"],
       description:
         "A visual, interactable tool for algorithms sorting methods as well as a maze-drawing and solving system for path of least resistance. ",
-      image_url: SortPath,
+      image_url: <SortPath />,
       image_rel: "../../images/sortpath.png",
 
       github: "https://github.com/eathren/algo_showcase",
@@ -100,13 +100,7 @@ const ProjectsBar = () => {
                     className="project-img"
                     onClick={() => handleExpandClick(i)}
                   >
-                    {/* There has to be a better way to get the gatsby fuzzy 
-                    load here than a conditional render.  */}
-                    {project.image_url == SolistsImage ? (
-                      <SolistsImage />
-                    ) : (
-                      <SortPath />
-                    )}
+                    <>{project.image_url}</>
                   </CardActionArea>
                   <CardActions disableSpacing>
                     <IconButton href={project.url} aria-label="site link">
