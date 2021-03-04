@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useEffect } from "react"
 import "./styles.scss"
 
 import { makeStyles } from "@material-ui/core/styles"
@@ -53,16 +54,23 @@ const ProjectsImage = project => {
 
 const ProjectsBar = () => {
   const classes = useStyles()
-  const [expanded, setExpanded] = React.useState(false)
+  const [expanded, setExpanded] = React.useState([])
 
-  function handleExpandClick(e) {
-    e.preventDefault()
-    setExpanded(!expanded)
+  useEffect(() => {
+    const n = projects.length
+    const tempArray = []
+    for (let i = 0; i < n; i++) {
+      tempArray.push(false)
+    }
+    setExpanded(tempArray)
+  }, [])
+
+  function handleExpandClick(i) {
+    const tempArray = [...expanded]
+    tempArray[i] = !tempArray[i]
+    console.log(tempArray)
+    setExpanded(tempArray)
   }
-  // const handleExpandClick = e => {
-  //   e.preventDefault()
-  //   setExpanded(!expanded)
-  // }
 
   const projects = [
     {
@@ -97,7 +105,7 @@ const ProjectsBar = () => {
             <Grid item xs={12} sm={12} md={6} spacing={3} key={i}>
               <div className="project-container">
                 <Card className="projects-card">
-                  <CardActionArea onClick={handleExpandClick}>
+                  <CardActionArea onClick={() => handleExpandClick(i)}>
                     <img
                       className={classes.media}
                       src={project.image_url}
@@ -120,17 +128,17 @@ const ProjectsBar = () => {
                     )}
                     <IconButton
                       className={clsx(classes.expand, {
-                        [classes.expandOpen]: expanded,
+                        [classes.expandOpen]: expanded[i],
                       })}
-                      onClick={handleExpandClick}
-                      aria-expanded={expanded}
+                      onClick={() => handleExpandClick(i)}
+                      aria-expanded={expanded[i]}
                       aria-label="show more"
                     >
                       <ExpandMoreIcon />
                     </IconButton>
                   </CardActions>
 
-                  <Collapse in={expanded} timeout="auto" unmountOnExit>
+                  <Collapse in={expanded[i]} timeout="auto" unmountOnExit>
                     <CardContent>
                       <h3>{project.name}</h3>
                       <p>{project.description}</p>
