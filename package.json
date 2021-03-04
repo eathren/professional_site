@@ -6,7 +6,9 @@
   "author": "Nolan Braman <nolan.braman@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "gatsby": "^3.0.0",
+    "gatsby-image": "^3.0.0",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
     "gatsby-plugin-image": "^1.0.0",
     "gatsby-plugin-manifest": "^3.0.0",
@@ -17,6 +19,7 @@
     "gatsby-plugin-sharp": "^3.0.0",
     "gatsby-plugin-typography": "^3.0.0",
     "gatsby-source-filesystem": "^3.0.0",
+    "gatsby-transformer-json": "^3.0.0",
     "gatsby-transformer-remark": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
     "prop-types": "^15.7.2",

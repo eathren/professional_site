@@ -25,9 +25,15 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="bio">
-      <Grid container spacing={3}>
-        <Grid item xs={1}>
+    <div className="">
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+        spacing={3}
+      >
+        <Grid item xs={3}>
           <StaticImage
             src="../../images/profile-pic.png"
             formats={["AUTO", "WEBP", "AVIF"]}
@@ -43,7 +49,7 @@ const Bio = () => {
             }}
           />
         </Grid>
-        <Grid item xs={11}>
+        <Grid item xs={9}>
           {author?.name && (
             <p>
               Personal blog and portfolio by{" "}

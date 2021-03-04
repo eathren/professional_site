@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Solists",
+    "url": "solists.com",
+    "keywords": ["Django", "Python", "Heroku", "Sendgrid"],
+    "description": "An online job board aggregator and promotional system for companies and clients.",
+    "image_url": ""
+  },
+  {
+    "name": "SortPath",
+    "url": "sortpath.dev",
+    "keywords": ["React.js", "JavaScript", "Sass / CSS3", "Netlify"],
+    "description": "A visual, interactable tool for algorithms sorting methods as well as a maze-drawing and solving system for path of least resistance. ",
+    "image_url": ""
+  }
+]

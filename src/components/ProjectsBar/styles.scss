@@ -1,13 +1,15 @@
 .projects-card {
+  min-height: 700px;
+  //   margin: 20px;
 }
 
 .project-container {
-  min-height: 200px;
+  min-height: 700px;
   margin: 20px;
-  padding: 20px;
 }
 
 .project-image {
-  min-height: 200px;
+  height: auto;
+  //   min-height: 200px;
   min-width: 200px;
 }

@@ -6,13 +6,13 @@ const themeLight = createMuiTheme({
       light: "#ff6090",
       main: "#e91e63",
       dark: "#b0003a",
-      contrastText: "#000000",
+      contrastText: "#ffffff",
     },
     secondary: {
       light: "#f48fb1",
       main: "#ffc1e3",
       dark: "#bf5f82",
-      contrastText: "#000",
+      contrastText: "#000000",
     },
   },
 })

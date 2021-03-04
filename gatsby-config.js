@@ -23,6 +23,7 @@ module.exports = {
         name: `blog`,
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -30,6 +31,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data`,
+      },
+    },
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -46,7 +55,7 @@ module.exports = {
         plugins: [],
       },
     },
-    `gatsby-plugin-sharp`,
+
     {
       resolve: `gatsby-plugin-typography`,
       options: {
