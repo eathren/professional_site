@@ -55,9 +55,14 @@ const ProjectsBar = () => {
   const classes = useStyles()
   const [expanded, setExpanded] = React.useState(false)
 
-  const handleExpandClick = () => {
+  function handleExpandClick(e) {
+    e.preventDefault()
     setExpanded(!expanded)
   }
+  // const handleExpandClick = e => {
+  //   e.preventDefault()
+  //   setExpanded(!expanded)
+  // }
 
   const projects = [
     {
@@ -83,15 +88,13 @@ const ProjectsBar = () => {
     },
   ]
 
-  // const projects = data.allProjectsJson.edges
-  // console.log(projects)
   return (
     <>
       <h1> Projects</h1>
-      <Grid container direction="row" justify="center" alignItems="center">
-        {projects.map(project => (
+      <Grid container direction="row" justify="center" alignItems="flex-start">
+        {projects.map((project, i) => (
           <>
-            <Grid item xs={12} sm={12} md={6} spacing={3}>
+            <Grid item xs={12} sm={12} md={6} spacing={3} key={i}>
               <div className="project-container">
                 <Card className="projects-card">
                   <CardActionArea onClick={handleExpandClick}>
@@ -99,15 +102,22 @@ const ProjectsBar = () => {
                       className={classes.media}
                       src={project.image_url}
                       className=""
-                    ></img>
+                    />
                   </CardActionArea>
                   <CardActions disableSpacing>
                     <IconButton href={project.url} aria-label="site link">
                       <LinkIcon />
                     </IconButton>
-                    <IconButton href={project.github} aria-label="github link">
-                      <GitHubIcon />
-                    </IconButton>
+                    {project.github ? (
+                      <IconButton
+                        href={project.github}
+                        aria-label="github link"
+                      >
+                        <GitHubIcon />
+                      </IconButton>
+                    ) : (
+                      <> </>
+                    )}
                     <IconButton
                       className={clsx(classes.expand, {
                         [classes.expandOpen]: expanded,

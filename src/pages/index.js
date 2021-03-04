@@ -16,7 +16,6 @@ const indexPage = ({ data, location }) => {
       <SEO title="All posts" />
       <Bio />
       <ProjectsBar></ProjectsBar>
-      {/* <Link to="/resume/"> About me</Link> */}
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
