@@ -4,6 +4,10 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
+import IconButton from "@material-ui/core/IconButton"
+import HomeIcon from "@material-ui/icons/Home"
+import LocalLibrary from "@material-ui/icons/LocalLibrary"
+
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -20,6 +24,12 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
+        <IconButton component={Link} to="/">
+          <HomeIcon></HomeIcon>
+        </IconButton>
+        <IconButton component={Link} to="/blog">
+          <LocalLibrary></LocalLibrary>
+        </IconButton>
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
