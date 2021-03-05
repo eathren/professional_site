@@ -1,7 +1,14 @@
 import * as React from "react"
+import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+
+import IconButton from "@material-ui/core/IconButton"
 import Grid from "@material-ui/core/Grid"
+import GitHubIcon from "@material-ui/icons/GitHub"
+import MailIcon from "@material-ui/icons/Mail"
+import LinkedInIcon from "@material-ui/icons/LinkedIn"
+
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -57,6 +64,20 @@ const Bio = () => {
               {author?.summary || null}
             </p>
           )}
+          <IconButton className="icon-button" href="https://github.com/eathren">
+            <GitHubIcon className="icon-color" />
+          </IconButton>
+          <IconButton
+            className="icon-button"
+            href="https://www.linkedin.com/in/nolanbraman/"
+          >
+            <LinkedInIcon className="icon-color" />
+          </IconButton>
+        </Grid>
+        <Grid item xs={12}>
+          {/* <IconButton className="icon-button" component={Link} to="/contact">
+            <MailIcon className="icon-color" />
+          </IconButton> */}
         </Grid>
       </Grid>
     </div>

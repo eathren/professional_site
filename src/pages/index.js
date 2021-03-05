@@ -8,8 +8,6 @@ import Bio from "../components/Bio"
 import ProjectsBar from "../components/ProjectsBar"
 import BlogBar from "../components/BlogBar"
 
-import Grid from "@material-ui/core/grid"
-
 const indexPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Nolan Braman`
   const posts = data.allMarkdownRemark.nodes

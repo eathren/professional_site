@@ -63,6 +63,6 @@ And most likely the best part of the entire thing is that if I change anything i
 
 And that is just lovely.
 
-If you haven't tried using TDD for at least one project, I would highly, highly recommend it.
+If you haven't tried using TDD for at least one project, I would highly, highly recommend it. It's something I've finally gotten to dip my toes into, and now that I'm here, I'm not quite sure if I ever want to leave.
 
 <!-- A positive and negative of this is the new-ish ideas of Continuous Integration & Continuous Developmet -->
