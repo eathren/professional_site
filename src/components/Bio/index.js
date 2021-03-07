@@ -9,6 +9,8 @@ import GitHubIcon from "@material-ui/icons/GitHub"
 import MailIcon from "@material-ui/icons/Mail"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 
+import "./main.scss"
+
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -32,21 +34,20 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="">
+    <div className="bio-center">
       <Grid
         container
         direction="row"
         justify="center"
         alignItems="center"
-        spacing={3}
       >
-        <Grid item>
           <StaticImage
             src="../../images/profile-pic.png"
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="Profile Pic"
-            width={300}
+            width={50}
             quality={95}
+            layout="constrained"
             formats={["AUTO", "WEBP", "AVIF"]}
             style={{
               marginBottom: `1.45rem`,
@@ -55,16 +56,18 @@ const Bio = () => {
               borderRadius: "100%",
             }}
           />
-        </Grid>
-        <Grid item>
+          <div className="bio-text">
+
           {author?.name && (
             <p>
-              Personal blog and portfolio by{" "}
+              Personal blog  by{" "}
               <a href={social.linkedin}>{author.name}</a> <br />{" "}
               {author?.summary || null}
             </p>
           )}
-          <IconButton className="icon-button" href="https://github.com/eathren">
+          </div>
+      </Grid>
+          {/* <IconButton className="icon-button" href="https://github.com/eathren">
             <GitHubIcon className="icon-color" />
           </IconButton>
           <IconButton
@@ -72,14 +75,7 @@ const Bio = () => {
             href="https://www.linkedin.com/in/nolanbraman/"
           >
             <LinkedInIcon className="icon-color" />
-          </IconButton>
-        </Grid>
-        <Grid item xs={12}>
-          {/* <IconButton className="icon-button" component={Link} to="/contact">
-            <MailIcon className="icon-color" />
           </IconButton> */}
-        </Grid>
-      </Grid>
     </div>
   )
 }

@@ -1,0 +1,19 @@
+.bio-center{
+    text-align: center
+}
+
+.bio-main{
+    // display: inline-block;
+}
+
+.bio-text{
+    margin-left: 20px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 800px) {
+ .bio-text{
+    margin-left: 10px;
+    text-align: left;
+}
+}

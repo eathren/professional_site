@@ -5,7 +5,7 @@ module.exports = {
     siteUrl: `https://www.nolanbraman.com`,
     author: {
       name: `Nolan Braman`,
-      summary: `Building better software and tinkering with tech in Boston, MA. `,
+      summary: `Software professional in Boston, MA. `,
     },
     social: {
       twitter: `eathren`,
