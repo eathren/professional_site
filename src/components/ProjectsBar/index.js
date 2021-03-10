@@ -72,7 +72,7 @@ const ProjectsBar = () => {
         "An online job board aggregator and promotional system for companies and clients.",
       image_url: <SolistsImage />,
       image_rel: "../../images/solists.png",
-      github: "",
+      github: "https://github.com/eathren/professional_site",
     },
     {
       name: "SortPath",
@@ -114,8 +114,8 @@ const ProjectsBar = () => {
                         <GitHubIcon />
                       </IconButton>
                     ) : (
-                      <> </>
-                    )}
+                        <> </>
+                      )}
                     <IconButton
                       className={clsx(classes.expand, {
                         [classes.expandOpen]: expanded[i],
