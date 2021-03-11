@@ -1,8 +1,9 @@
 import * as React from "react"
-import { Link } from "gatsby"
+
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+import Link from "@material-ui/core/Link"
 import IconButton from "@material-ui/core/IconButton"
 import Grid from "@material-ui/core/Grid"
 import GitHubIcon from "@material-ui/icons/GitHub"
@@ -41,33 +42,33 @@ const Bio = () => {
         justify="center"
         alignItems="center"
       >
-          <StaticImage
-            src="../../images/profile-pic.png"
-            formats={["AUTO", "WEBP", "AVIF"]}
-            alt="Profile Pic"
-            width={50}
-            quality={95}
-            layout="constrained"
-            formats={["AUTO", "WEBP", "AVIF"]}
-            style={{
-              marginBottom: `1.45rem`,
-              maxHeight: "60px",
-              maxWidth: "60px",
-              borderRadius: "100%",
-            }}
-          />
-          <div className="bio-text">
+        <StaticImage
+          src="../../images/profile-pic.png"
+          formats={["AUTO", "WEBP", "AVIF"]}
+          alt="Profile Pic"
+          width={50}
+          quality={95}
+          layout="constrained"
+          formats={["AUTO", "WEBP", "AVIF"]}
+          style={{
+            marginBottom: `1.45rem`,
+            maxHeight: "60px",
+            maxWidth: "60px",
+            borderRadius: "100%",
+          }}
+        />
+        <div className="bio-text">
 
           {author?.name && (
             <p>
               Personal blog  by{" "}
-              <a href={social.linkedin}>{author.name}</a> <br />{" "}
+              <Link href={social.linkedin}>{author.name}</Link> <br />{" "}
               {author?.summary || null}
             </p>
           )}
-          </div>
+        </div>
       </Grid>
-          {/* <IconButton className="icon-button" href="https://github.com/eathren">
+      {/* <IconButton className="icon-button" href="https://github.com/eathren">
             <GitHubIcon className="icon-color" />
           </IconButton>
           <IconButton

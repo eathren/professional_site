@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql, StaticQuery } from "gatsby"
+
 import Button from "@material-ui/core/Button"
 // mui
 
@@ -43,7 +44,7 @@ export default () => (
                   itemScope
                   itemType="http://schema.org/Article"
                 >
-                  <header>
+                  <div>
                     <h2 style={{ marginBottom: "5px" }}>
                       <Link to={node.fields.slug} itemProp="url">
                         <span itemProp="headline">{title}</span>
@@ -53,7 +54,7 @@ export default () => (
                       <span>{node.frontmatter.date} -</span>
                       <span> {node.timeToRead} min read</span>
                     </small>
-                  </header>
+                  </div>
                   <section>
                     <p
                       dangerouslySetInnerHTML={{

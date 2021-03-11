@@ -7,10 +7,10 @@ import SEO from "../components/seo"
 import Bio from "../components/Bio"
 import ProjectsBar from "../components/ProjectsBar"
 import BlogBar from "../components/BlogBar"
+import Footer from "../components/Footer"
 
 const indexPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Nolan Braman`
-  const posts = data.allMarkdownRemark.nodes
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -18,6 +18,7 @@ const indexPage = ({ data, location }) => {
       <Bio />
       <ProjectsBar />
       <BlogBar />
+      <Footer />
     </Layout>
   )
 }
