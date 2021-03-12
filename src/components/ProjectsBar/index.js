@@ -72,7 +72,7 @@ const ProjectsBar = () => {
         "An online job board aggregator and promotional system for companies and clients.",
       image_url: <SolistsImage />,
       image_rel: "../../images/solists.png",
-      github: "https://github.com/eathren/professional_site",
+      github: "https://github.com/eathren/solists",
     },
     {
       name: "SortPath",
