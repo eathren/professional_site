@@ -23,4 +23,3 @@ If you have issues on windows, a recent gatsby bug (or intentional design?) seem
 
 ### Images
 ![Screenshot PC](https://i.imgur.com/e9aSKIU.png)
-![Screenshot Mobile](https://i.imgur.com/gAlVfJg.png)
