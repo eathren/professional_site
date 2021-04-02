@@ -20,5 +20,4 @@ If you have issues on windows, a recent gatsby bug (or intentional design?) seem
 ### Live site is available at [www.nolanbraman.com](https://www.nolanbraman.com)
 
 ### Images
-![Screenshot PC](https://i.imgur.com/lri6mfe.png)
-![Screenshot Mobile](https://i.imgur.com/aJLL33a.png)
+[Screenshot PC](https://i.imgur.com/e9aSKIU.png)
