@@ -1,5 +1,5 @@
 ---
-title: Grad School and The March to Approaching Senior
+title: Grad School and The Slow March to Approaching Senior
 date: "2021-06-09"
 description: "An update after months of silence, some thoughts on the academic system, and the market, and a splash of what being a developer is all about. (In my opinion)"
 ---
