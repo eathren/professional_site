@@ -9,7 +9,7 @@ description: "An update after months of silence, some thoughts on the academic s
 
 It's been a wild run. After growing my hair out at the start of the quarantine, it now reaches mid-back, and the end is finally in sight.
 
-I left my last job, and was introduced to the market for the firs time. (Imagine my surprise as to when I realized that interviewing was an actual skill that needed to be learned!)
+I left my last job, and was introduced to the market for the first time. (Imagine my surprise as to when I realized that interviewing was an actual skill that needed to be learned!)
 
 I wrestled with imposter syndrome after several years of being a successful developer, and decided to jump a little earlier back to school, convinced that there was more to learn. 
 
